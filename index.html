@@ -218,7 +218,7 @@ Browser tidak mendukung video.
 <div class="card"><h3>Info Match</h3><p>Jadwal Live Score808 hari ini.</p>
 
 </div>
-<iframe title='live skor' id='score808frame2' loading='lazy' scrolling='no' src='https://official.tigoals.my.id/p/livescore-today.html' style='width: 100%; border: none;'></iframe></div>
+<iframe title='live skor' id='score808frame2' loading='lazy' scrolling='no' src='https://official.score808.my.id/p/schedule_14.html' style='width: 100%; border: none;'></iframe></div>
 
 <div class="sidebar">
 <div class="card"><h3>Highlight</h3><p>Video Highlights Pertandingan</p>
@@ -240,7 +240,7 @@ window.addEventListener("message", function(e) {
     }
   });
   window.addEventListener("message", function(e) {
-    if (e.origin !== "https://official.tigoals.my.id") return;
+    if (e.origin !== "https://official.score808.my.id") return;
     const iframe = document.getElementById("score808frame2");
     if (e.data && e.data.height) {
       iframe.style.height = e.data.height + "px";
