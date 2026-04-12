@@ -27,11 +27,27 @@
 <meta name="monetag" content="af889b988f76ddd01b54e414ad49727f">
 	<meta name="yandex-verification" content="cba9881a0ee5b8fe" />
   	
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "SportsEvent",
+ "name": "Live Streaming Bola Hari Ini",
+ "description": "Jadwal pertandingan sepak bola, live streaming dan skor langsung dari berbagai liga dunia.",
+ "startDate": "2026-04-12T15:00:00+07:00",
+ "eventStatus": "https://schema.org/EventScheduled",
+ "sport": "Soccer",
+ "organizer": {
+   "@type": "Organization",
+   "name": "Score808"
+ }
+}
+</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 
 body{
-font-family:system-ui,-apple-system,Segoe UI;
+font-family:'Inter',system-ui;
 background:#020617;
 color:#fff;
 }
@@ -40,25 +56,26 @@ color:#fff;
 .header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-padding:12px 16px;
-background:linear-gradient(to bottom,rgba(0,0,0,.8),transparent);
-z-index:999;
+padding:14px 20px;
 display:flex;
 justify-content:space-between;
 align-items:center;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+z-index:999;
 }
 
 .logo{
 font-weight:700;
 color:#facc15;
 text-decoration:none;
+font-size:18px;
 }
 
 .subscribe{
-background:#e11d48;
-padding:8px 14px;
+background:linear-gradient(135deg,#ef4444,#dc2626);
+padding:8px 16px;
 border-radius:999px;
 font-size:13px;
 font-weight:600;
@@ -70,100 +87,93 @@ color:#fff;
 .container{
 max-width:1400px;
 margin:auto;
-padding:70px 12px 80px;
+padding:80px 14px 80px;
 display:grid;
 grid-template-columns:2fr 1fr;
-gap:16px;
+gap:20px;
 }
 
 @media(max-width:900px){
 .container{grid-template-columns:1fr}
 }
 
-/* VIDEO */
-.video-wrapper{
-position:relative;
-width:100%;
-aspect-ratio:16/9;
-background:#000;
-border-radius:14px;
-overflow:hidden;
-}
-
-video{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-iframe{width:100%;height:100%;border:none}
-
 /* CARD */
 .card{
-background:#0f172a;
-padding:14px;
-border-radius:14px;
-margin-bottom:12px;
-box-shadow:0 4px 14px rgba(0,0,0,.4);
+background:rgba(15,23,42,.7);
+backdrop-filter:blur(12px);
+padding:16px;
+border-radius:16px;
+margin-bottom:14px;
+border:1px solid rgba(255,255,255,.06);
 }
 
-.card h3{font-size:14px;color:#facc15;margin-bottom:6px}
-.card p{font-size:13px;opacity:.7}
+.card h2{
+color:#facc15;
+font-size:14px;
+margin-bottom:6px;
+}
+
+.card p{
+font-size:13px;
+opacity:.7;
+}
+
 .domain{
-  display:inline-block;
-  margin:10px 0;
-  padding:6px 12px;
-  border-radius:999px;
-  background:#0f172a;
-  border:1px solid rgba(255,255,255,.1);
-  font-weight:700;
-  font-size:14px;
-  color:#38bdf8;
-}
-	/* tombol live modern */
-.live-btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  margin-top:14px;
-  padding:6px 12px;
-  background:linear-gradient(135deg,#ef4444,#dc2626);
-  border-radius:8px;
-  text-decoration:none;
-  color:#fff;
-  font-weight:700;
-  font-size:14px;
-  transition:.25s ease;
-  box-shadow:0 4px 14px rgba(239,68,68,.35);
+display:inline-block;
+margin:10px 0;
+padding:6px 12px;
+border-radius:999px;
+background:#020617;
+border:1px solid rgba(255,255,255,.1);
+font-weight:700;
+color:#38bdf8;
 }
 
-.live-btn:hover{
-  transform:translateY(-2px);
-  box-shadow:0 6px 20px rgba(239,68,68,.5);
+/* BUTTON */
+.live-btn{
+display:inline-flex;
+align-items:center;
+gap:8px;
+margin-top:14px;
+padding:8px 14px;
+background:#ef4444;
+border-radius:8px;
+text-decoration:none;
+color:#fff;
+font-weight:700;
+font-size:13px;
 }
 
 .live-dot{
-  width:8px;
-  height:8px;
-  background:#fff;
-  border-radius:50%;
-  animation:pulse 1.2s infinite;
+width:8px;height:8px;
+background:#fff;
+border-radius:50%;
+animation:pulse 1s infinite;
 }
 
 @keyframes pulse{
-  0%{opacity:1}
-  50%{opacity:.3}
-  100%{opacity:1}
+0%{opacity:1}
+50%{opacity:.3}
+100%{opacity:1}
 }
+
+/* IFRAME */
+iframe{
+width:100%;
+border:none;
+border-radius:14px;
+}
+
 /* SIDEBAR */
-.sidebar{position:sticky;top:70px;height:fit-content}
+.sidebar{
+position:sticky;
+top:90px;
+}
 
 /* NAV */
 .bottom-nav{
 position:fixed;
 bottom:0;
-left:0;
 width:100%;
 background:#020617;
 border-top:1px solid #1e293b;
@@ -191,7 +201,11 @@ color:#fff;
 <body>
 
 <div class="header">
-<a href="https://tigoals.score808.eu.org" class="logo">Score808 Premium</a>
+<h1 class="site-title">
+  <a href="https://tigoals.score808.eu.org" class="logo">
+    Tigoals Pro
+  </a>
+</h1>
 <a href="https://whatsapp.com/channel/0029VbC7N00EQIaqwkJiAv0Y" class="subscribe">Subscribe</a>
 </div>
 
@@ -213,11 +227,11 @@ Browser tidak mendukung video.
     Highlights
   </a>
 </div>
-<div class="card"><h3>Info Match</h3><p>Jadwal Live Score808 hari ini.</p>
+<div class="card"><h2>Info Match</h2><p>Jadwal Live Score808 hari ini.</p>
 </div>
 <iframe title='live skor' id='score808frame2' loading='lazy' scrolling='no' src='https://official.tigoals.my.id/p/livescore-today.html' style='width: 100%; border: none;'></iframe></div>
 <div class="sidebar">
-<div class="card"><h3>Highlight</h3><p>Video Highlights Pertandingan</p>
+<div class="card"><h2>Highlight</h2><p>Video Highlights Pertandingan</p>
 <iframe title='live skor' id='score808frame' loading='lazy' scrolling='no' src='https://official.tigoals.my.id/p/highlights-score808.html' style='width: 100%; border: none;'></iframe></div>
 </div>
 
